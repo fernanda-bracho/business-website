@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicenter | Mantenimiento y servicios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/Logo ServiCenter limpio.png">
+
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/header.css">
+
+</head>
+
+<body>
+
+   <header class="header">
+        <div class="logo">
+            <img src="img/Logo ServiCenter limpio.png" alt="Eléctrica Servicenter">
+        </div>
+
+        <nav class="nav-desktop">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="certificaciones.html" data-page="certificaciones">Certificaciones</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Menú móvil">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="certificaciones.html">Certificaciones</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+    <main>
+        <section class="seccion-contacto">
+            <div class="contacto-layout">
+
+                <div class="contacto-info">
+                    <h2 class="contacto-titulo">Hablemos de tu proyecto</h2>
+                    <p class="contacto-texto">
+                        Cuéntanos qué necesitas y te ayudamos a encontrar la mejor solución
+                        en mantenimiento e instalaciones eléctricas para tu empresa.
+                    </p>
+
+                    <div class="contacto-datos">
+                        <div class="contacto-dato">
+                            <span class="contacto-icono">📞</span>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>+52 33 3477 4239</p>
+                            </div>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <span class="contacto-icono">📧</span>
+                            <div>
+                                <strong>Correo</strong>
+                                <p>miguelavalos@servicentermx.com<br>oliviavenegas@servicentermx.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <span class="contacto-icono">📍</span>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <p>Guadalajara, Jalisco, México</p>
+                            </div>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <span class="contacto-icono">🕒</span>
+                            <div>
+                                <strong>Horario</strong>
+                                <p>Lunes a viernes · 9:00am a 6:00pm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="contacto-nota">
+                        Siempre estaremos encantados de atenderle.
+                    </p>
+                </div>
+
+                <div class="contacto-formulario">
+                    <h3 class="contacto-form-titulo">Envíanos un mensaje</h3>
+
+                    <form
+                        id="form-contacto"
+                        action="https://formspree.io/f/xgvgnraw"
+                        method="POST"
+                    >
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde la página de Servicenter">
+
+                        <div class="campo-grupo">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="campo-doble">
+                            <div class="campo-grupo">
+                                <label for="correo">Correo electrónico</label>
+                                <input type="email" id="correo" name="email" required>
+                            </div>
+                            <div class="campo-grupo">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="empresa">Empresa (opcional)</label>
+                            <input type="text" id="empresa" name="empresa">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="servicio">¿Qué servicio te interesa?</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">Selecciona una opción</option>
+                                <option value="Mantenimiento eléctrico industrial">Mantenimiento eléctrico industrial</option>
+                                <option value="Equipos de arranque para motores">Equipos de arranque para motores</option>
+                                <option value="Control y automatización de motores">Control y automatización de motores</option>
+                                <option value="Instalaciones eléctricas media / baja tensión">Instalaciones eléctricas media / baja tensión</option>
+                                <option value="Otro / No estoy seguro">Otro / No estoy seguro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="mensaje">Cuéntanos un poco más</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primario btn-enviar">
+                            Enviar mensaje
+                        </button>
+
+                        <p id="mensaje-estado" class="mensaje-estado" aria-live="polite"></p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Servicenter. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+
+    <script>
+    const form = document.getElementById("form-contacto");
+    const estado = document.getElementById("mensaje-estado");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); 
+
+        estado.textContent = "Enviando mensaje...";
+        estado.style.color = "";
+
+        const data = new FormData(form);
+
+        try {
+            const res = await fetch(form.action, {
+                method: "POST",
+                body: data,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (res.ok) {
+                estado.textContent = "¡Gracias! Hemos recibido tu mensaje. Te contactaremos pronto.";
+                estado.style.color = "green";
+                form.reset();
+            } else {
+                estado.textContent = "Hubo un problema al enviar tu mensaje. Intenta más tarde.";
+                estado.style.color = "red";
+            }
+        } catch (error) {
+            console.error(error);
+            estado.textContent = "Error de conexión. Revisa tu internet e inténtalo de nuevo.";
+            estado.style.color = "red";
+        }
+    });
+    </script>
+
+</body>
+</html>

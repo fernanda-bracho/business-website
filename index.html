@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Servicenter | Mantenimiento y servicios</title>
+  <meta name="description" content="Instalación, mantenimiento y reparación eléctrica profesional en Guadalajara, Jalisco. Atención a fallas críticas y compromiso con la seguridad." />
+
+  <link rel="icon" type="image/png" href="img/Logo ServiCenter limpio.png" />
+
+  <link rel="stylesheet" href="css/header.css" />
+
+  
+  <link rel="stylesheet" href="css/index.css" />
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body data-page="index">
+
+
+  <header class="header">
+    <div class="logo">
+      <img src="img/Logo ServiCenter limpio.png" alt="Eléctrica Servicenter">
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="certificaciones.html">Certificaciones</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Menú móvil">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="certificaciones.html">Certificaciones</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <p class="hero-tag">Soluciones eléctricas para tu empresa</p>
+
+          <h1 class="hero-title">
+            Instalación, Mantenimiento<br>
+            y Reparación eléctrica profesional
+          </h1>
+
+          <p class="hero-subtitle">
+            “Obtenemos su confianza otorgando un buen servicio”
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="contacto.html" class="btn-primario">Contáctanos</a>
+            <a href="servicios.html" class="btn-secundario">Ver servicios</a>
+          </div>
+
+          <div class="hero-benefits">
+            <div class="hero-benefit">
+              <span class="hero-benefit-number">10+</span>
+              <p>Años de experiencia</p>
+            </div>
+            <div class="hero-benefit">
+              <span class="hero-benefit-number">24/7</span>
+              <p>Atención a fallas críticas</p>
+            </div>
+            <div class="hero-benefit">
+              <span class="hero-benefit-number">100%</span>
+              <p>Compromiso con la seguridad</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-illustration">
+          <div class="hero-image-card">
+            <img
+              src="img/hero.jpg"
+              alt="Técnico realizando mantenimiento eléctrico industrial"
+              loading="eager"
+            >
+          </div>
+
+          <div class="hero-floating-badge" aria-label="Estado del proyecto">
+            <span class="hero-badge-dot"></span>
+            <div>
+              <p class="hero-badge-label">Proyecto industrial</p>
+              <p class="hero-badge-value">En ejecución</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="ubicaciones" class="seccion seccion-mapa">
+      <h2>Nuestra ubicación</h2>
+
+      <p class="mapa-texto-intro">
+        Contamos con presencia en Guadalajara, Jalisco para brindarle una atención de calidad.
+      </p>
+
+      <div id="mapa-servicenter"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Servicenter. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="js/mapa.js"></script>
+  <script src="js/menu.js"></script>
+
+</body>
+</html>
