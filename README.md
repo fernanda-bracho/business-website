@@ -26,10 +26,12 @@ A fully functional business website currently deployed and running in production
 * /img → images
 * /videos → media
 
+
 ## Description
 
 This project consists of a real-world business website developed and deployed with a custom domain.
 It was designed to provide information about services, improve online presence, and offer a professional user experience.
+The author led the full development lifecycle, including requirements analysis, system design, development, deployment, and hosting configuration.
 
 ## Author
 Fernanda Bracho
